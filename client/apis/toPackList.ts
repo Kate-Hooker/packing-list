@@ -1,4 +1,4 @@
-import { ListItem,ListItemData } from '../../server/models/listItem'
+import { ListItem, ListItemData } from '../../server/models/listItem'
 import request from 'superagent'
 
 //return whole toPack list
@@ -33,7 +33,10 @@ export async function addListItem(newListItem: ListItemData) {
 }
 
 //update a list item
-export async function updateListItem(id:Number, updatedListItem: ListItemData) {
+export async function updateListItem(
+  id: number,
+  updatedListItem: ListItemData
+) {
   try {
     const response = await request
       .patch(`/api/v1/packingList/${id}`)

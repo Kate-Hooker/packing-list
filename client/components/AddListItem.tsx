@@ -82,7 +82,7 @@ function ListItemForm(props: Props) {
   function handleChange(
     e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ) {
-    setNewListItem({ ...newListItem, [e.target.id]: e.target.value }) ////// possibley sap id or itemToP
+    setNewListItem({ ...newListItem, [e.target.id]: e.target.value }) 
   }
 
   if (props.loading) return <p>Loading...</p>
@@ -108,7 +108,7 @@ function ListItemForm(props: Props) {
 
         <div className="pure-control-group">
           <label htmlFor="checkBeforePacking">
-            What to check before packing? 
+            What to check before packing?
           </label>
           <input
             type="text"

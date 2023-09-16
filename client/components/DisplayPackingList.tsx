@@ -15,7 +15,7 @@ function DisplayPackingList(props: Props) {
 
   async function handleDelete(id: number) {
     await deleteListItem(id)
-    fetchListItems() ////// possibley sap id or itemToP
+    fetchListItems() 
   }
   return (
     <div className="packingListDisplay">
