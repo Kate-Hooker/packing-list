@@ -1,8 +1,6 @@
-body {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 20px;
-  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+.oneListItem {
+  border: 1px solid #250246;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f0f0f0;
 }

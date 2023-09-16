@@ -1,11 +1,50 @@
+import DisplayPackingList from './DisplayPackingList.tsx'
+import useFetchListItems from './hooks/fetchListItems.tsx'
+import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom'
+import AddListItem from './AddListItem.tsx'
+
 function App() {
+  const { listItems, loading, error, fetchListItems } = useFetchListItems()
+
   return (
-    <>
-      <header className="header">
-        <h1>My Collection</h1>
-      </header>
-      <section className="main">{/* add your code here */}</section>
-    </>
+    <Router>
+      <div>
+        <header className="header"></header>
+        <section className="main">
+          <Link to="/add">
+            <button className="list-add-button">
+              Add a new item to your list
+            </button>
+          </Link>
+          <Routes>
+            <Route
+              path="/add"
+              element={
+                <AddListItem
+                  variant="new"
+                  fetchListItems={fetchListItems}
+                  listItems={listItems}
+                />
+              }
+            />
+            <Route
+              path=":id"
+              element={
+                <AddListItem
+                  variant="edit"
+                  fetchListItems={fetchListItems}
+                  listItems={listItems}
+                />
+              }
+            />
+          </Routes>
+        </section>
+        <DisplayPackingList
+          listItems={listItems}
+          fetchListItems={fetchListItems}
+        />
+      </div>
+    </Router>
   )
 }
 
