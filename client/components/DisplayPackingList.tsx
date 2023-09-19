@@ -15,32 +15,34 @@ function DisplayPackingList(props: Props) {
 
   async function handleDelete(id: number) {
     await deleteListItem(id)
-    fetchListItems() 
+    fetchListItems()
   }
   return (
     <div className="packingListDisplay">
-      <h1 className="packingListDisplayH eader">Packing List</h1>
-      {listItems?.map((listItemData) => {
-        return (
-          <div className="oneListItem" key={listItemData.id}>
-            <div>{listItemData.itemToPack}</div>
-            <div>{'Check: ' + listItemData.checkBeforePacking}</div>
+      <fieldset>
+        <legend>Packing List for Camp A Low Hum</legend>
+        {listItems?.map((listItemData) => {
+          return (
+            <div className="oneListItem" key={listItemData.id}>
+              <div>{listItemData.itemToPack}</div>
+              <div>{'Check: ' + listItemData.checkBeforePacking}</div>
 
-            <div className="list-edit-delete-group" role="group">
-              <Link to={'/' + listItemData.id}>
-                <button className="list-edit-delete-button">Edit</button>
-              </Link>
-              <button
-                className="list-edit-delete-button"
-                onClick={async () => handleDelete(listItemData.id)}
-              >
-                Delete
-              </button>
+              <div className="list-edit-delete-group" role="group">
+                <Link to={'/' + listItemData.id}>
+                  <button className="list-edit-delete-button">Edit</button>
+                </Link>
+                <button
+                  className="list-edit-delete-button"
+                  onClick={async () => handleDelete(listItemData.id)}
+                >
+                  Delete
+                </button>
+              </div>
             </div>
-          </div>
-        )
-      })}
-      <div></div>
+          )
+        })}
+        <div></div>
+      </fieldset>
     </div>
   )
 }

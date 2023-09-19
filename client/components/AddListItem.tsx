@@ -82,27 +82,33 @@ function ListItemForm(props: Props) {
   function handleChange(
     e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ) {
-    setNewListItem({ ...newListItem, [e.target.id]: e.target.value }) 
+    setNewListItem({ ...newListItem, [e.target.id]: e.target.value })
   }
 
   if (props.loading) return <p>Loading...</p>
 
   return (
-    <form className="pure-form pure-form-aligned" onSubmit={onSubmit}>
+    <form
+      className="pure-form pure-form-aligned"
+      aria-label="form to add items to packing list"
+      onSubmit={onSubmit}
+    >
       {props.variant === 'edit' ? (
         <h2 className="post-title">Edit List Item</h2>
       ) : (
-        <h2 className="post-title"> </h2>
+        <div> </div>
       )}
 
       <fieldset>
+        <legend>Form to Add Items to Packing List</legend>
         <div className="pure-control-group">
-          <label htmlFor="title">Item to pack </label>
+          <label htmlFor="itemToPack">Item to pack </label>
           <input
             type="text"
             id="itemToPack"
             value={newListItem.itemToPack}
             onChange={handleChange}
+            aria-label="Name of item you want to pack"
           />
         </div>
 
@@ -115,6 +121,7 @@ function ListItemForm(props: Props) {
             id="checkBeforePacking"
             value={newListItem.checkBeforePacking}
             onChange={handleChange}
+            aria-label="What to check before your item can be packed"
           />
         </div>
 
@@ -129,7 +136,11 @@ function ListItemForm(props: Props) {
         </div>
 
         <div className="pure-controls">
-          <input className="pure-button" type="submit" />
+          <input
+            className="pure-button"
+            type="submit"
+            aria-label="Add Item to Packing List"
+          />
         </div>
       </fieldset>
 

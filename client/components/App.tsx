@@ -10,6 +10,7 @@ function App() {
     <Router>
       <div>
         <header className="header"></header>
+        <h1>Packing List</h1>
         <section className="main">
           <Link to="/add">
             <button className="list-add-button">
