@@ -1,4 +1,4 @@
-App to keep a track of a holiday packing list.
+Keep a track of a holiday packing list.
 
 Packing list items can be added, deleted, and edited, and are stored in a SQLite database. 
 
