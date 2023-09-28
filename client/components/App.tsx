@@ -1,4 +1,4 @@
-import DisplayPackingList from './DisplayPackingList.tsx'
+/*import DisplayPackingList from './DisplayPackingList.tsx'
 import useFetchListItems from './hooks/fetchListItems.tsx'
 import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom'
 import AddListItem from './AddListItem.tsx'
@@ -49,4 +49,4 @@ function App() {
   )
 }
 
-export default App
+export default App */

@@ -1,4 +1,4 @@
-export interface ListItem {
+/* export interface ListItem {
   id: number
   itemToPack: string
   checkBeforePacking: string
@@ -12,3 +12,4 @@ export interface ListItemData {
 }
 
 export default ListItem
+*/ 

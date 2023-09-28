@@ -1,4 +1,4 @@
-import listItemData from '../../server/models/listItem'
+/*import listItemData from '../../server/models/listItem'
 import React from 'react'
 import styles from '../styles/index.css'
 import { Link } from 'react-router-dom'
@@ -47,4 +47,4 @@ function DisplayPackingList(props: Props) {
   )
 }
 
-export default DisplayPackingList
+export default DisplayPackingList */

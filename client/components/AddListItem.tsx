@@ -1,4 +1,4 @@
-import { useState, useEffect, FormEvent, ChangeEvent } from 'react'
+/*import { useState, useEffect, FormEvent, ChangeEvent } from 'react'
 import { useParams, useNavigate, useOutletContext } from 'react-router-dom'
 import { ListItem, ListItemData } from '../../server/models/listItem.ts'
 import { addListItem, updateListItem } from '../apis/toPackList.ts'
@@ -32,7 +32,7 @@ function ListItemForm(props: Props) {
     checkBeforePacking: '',
     hasBeenPacked: '',
   } */
-  const [newListItem, setNewListItem] = useState<ListItemData>({
+  /*const [newListItem, setNewListItem] = useState<ListItemData>({
     itemToPack: '',
     checkBeforePacking: '',
     hasBeenPacked: '',
@@ -149,4 +149,4 @@ function ListItemForm(props: Props) {
   )
 }
 
-export default ListItemForm
+export default ListItemForm */

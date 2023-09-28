@@ -1,4 +1,4 @@
-import db from './connection'
+/* import db from './connection'
 import { ListItem } from '../models/listItem'
 
 //get all items on list

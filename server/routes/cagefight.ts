@@ -1,11 +1,11 @@
 import express from 'express'
 const router = express.Router()
-import * as db from '../db/toPackListDB'
+import * as db from '../db/grimesBabyNamesDB'
 import {
   getListItemById,
   updateListItem,
   addListItem,
-} from '../db/toPackListDB'
+} from '../db/grimesBabyNamesDB'
 
 //import whole current list
 router.get('/', async (req, res) => {

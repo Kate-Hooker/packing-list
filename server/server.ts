@@ -1,11 +1,11 @@
-import express from 'express'
+ import express from 'express'
 import * as Path from 'node:path'
-import routes from './routes/packingList'
+import routes from './routes/cagefight'
 
 const server = express()
 
 server.use(express.json())
-server.use('/api/v1/packingList', routes)
+server.use('/api/v1/cagefight', routes)
 
 
 if (process.env.NODE_ENV === 'production') {
